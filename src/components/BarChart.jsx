@@ -14,17 +14,20 @@ const BarChart = () => {
 
   useEffect(() => {
     changeData();
+    //eslint-disable-next-line
   }, []);
 
   useEffect(() => {
-    const svg = d3.select(ref.current)
+    d3.select(ref.current)
         .attr("width", width)
         .attr("height", height)
         .style("border", "1px solid black")
+      //eslint-disable-next-line
   }, []);
 
   useEffect(() => {
     draw();
+    //eslint-disable-next-line
   }, [data]);
 
   const draw = () => {
