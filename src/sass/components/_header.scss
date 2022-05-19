@@ -1,0 +1,76 @@
+.header{
+    max-width: 111rem;
+    width: 100%;
+    //margin-top: 70rem;
+    display: flex;
+    gap: .7rem;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: $header-bg;
+    
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+    @media only screen and (max-width: 900px){
+        width: 90%;
+        flex-direction: column;
+        margin-top: 36rem;
+    }
+    @media only screen and (max-width: 600px){
+        margin-top: 25rem;
+    }
+
+    &__text{
+        position: relative;
+        width: 50%;
+        @media only screen and (max-width: 900px) {
+            width: 100%;
+            justify-self: flex-start;
+            font-size: .8rem;
+        }
+        
+        
+        &--img{
+            width: 100%;
+            object-fit: cover;
+            padding: 3rem 0 5rem 0;
+        }
+        
+        &--align{
+            width: 50%;
+            text-align: center;
+            background: transparent;
+            padding: 0 0 3rem 0;
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            //-webkit-transform: translate(-50%, -50%);
+                    -webkit-transform: translate(-50%, -50%);
+                            transform: translate(-50%, -50%);
+            @media only screen and (max-width: 600px){
+                padding-bottom: 1rem;
+                font-size: .7rem;
+            }
+
+
+        }
+    }
+
+    &__form{
+        width: 50%;
+        background: $primary-color;
+        padding: 4rem 5rem 4rem 2rem;
+        font-weight: 200;
+        font-size: small;
+        @media only screen and (max-width: 900px) {
+            width: 100%;
+            padding-left: 8rem;
+        }
+    }
+
+    
+}

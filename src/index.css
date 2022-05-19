@@ -1,13 +1,138 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+  background-color: #dfdddd; }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+img {
+  width: 100%; }
+
+.error {
+  color: #D8000C;
+  background-color: #FFBABA; }
+
+.font {
+  font-weight: 400;
+  font-size: 1.7rem; }
+
+.header {
+  max-width: 111rem;
+  width: 100%;
+  display: flex;
+  gap: .7rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: rgba(245, 240, 240, 0.938);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  @media only screen and (max-width: 900px) {
+    .header {
+      width: 90%;
+      flex-direction: column;
+      margin-top: 36rem; } }
+  @media only screen and (max-width: 600px) {
+    .header {
+      margin-top: 25rem; } }
+  .header__text {
+    position: relative;
+    width: 50%; }
+    @media only screen and (max-width: 900px) {
+      .header__text {
+        width: 100%;
+        justify-self: flex-start;
+        font-size: .8rem; } }
+    .header__text--img {
+      width: 100%;
+      object-fit: cover;
+      padding: 3rem 0 5rem 0; }
+    .header__text--align {
+      width: 50%;
+      text-align: center;
+      background: transparent;
+      padding: 0 0 3rem 0;
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+      @media only screen and (max-width: 600px) {
+        .header__text--align {
+          padding-bottom: 1rem;
+          font-size: .7rem; } }
+  .header__form {
+    width: 50%;
+    background: #fff;
+    padding: 4rem 5rem 4rem 2rem;
+    font-weight: 200;
+    font-size: small; }
+    @media only screen and (max-width: 900px) {
+      .header__form {
+        width: 100%;
+        padding-left: 8rem; } }
+
+.form {
+  width: 70%;
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; }
+  .form__text {
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: 1rem; }
+  .form__group {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem; }
+    .form__group--check {
+      display: flex;
+      gap: .7rem;
+      align-items: center; }
+    .form__group--btn {
+      align-self: flex-start; }
+    .form__group--input {
+      padding: .4rem;
+      margin-top: .1rem; }
+
+.btn {
+  color: #fff;
+  background-color: rgba(0, 162, 255, 0.726);
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: .8rem 2rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-decoration: none; }
+
+.chart {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem; }
+  .chart__link {
+    display: flex;
+    gap: 1rem; }
+  @media only screen and (max-width: 450px) {
+    .chart {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content; } }
